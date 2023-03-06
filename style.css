@@ -21,7 +21,7 @@ body {
     min-height: 600px;
     width: 550px;
     padding: 5px;
-    background-color: gainsboro;
+    background-color: black;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -34,11 +34,11 @@ body {
     top: 3%;
     width: 90%;
     height: 20%;
-    background-color: aliceblue;
+    background-color: grey;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
     font-style: italic;
     margin-bottom: 32px;
@@ -46,7 +46,7 @@ body {
 }
 
 #buttons{
-    background-color: gray;
+    background-color: black;
     position: absolute;
     right: 5%;
     top: 30%;
@@ -57,12 +57,29 @@ body {
     padding: 5px;
 }
 
+button:hover{
+    background-color: black;
+    color: white;
+}
+#special{
+    display: flex;
+    gap: 30px;
+}
 #reset{
     position: relative;
     top: 5%;
-    height: 15%;
-    width: 95%;
+    height: 250%;
+    width: 47.5%;
     left: 2.5%;
+    background-color: darkmagenta;
+}
+#back{
+    position: relative;
+    top: 5%;
+    height: 250%;
+    width: 47.5%;
+    right: 2.5%;
+    background-color: darkmagenta;
 }
 
 #numPad{
@@ -78,6 +95,7 @@ body {
 #operators button{
     width: 23.8%;
     height: 150%;
+    background-color: cyan;
 }
 
 #operators{
@@ -88,4 +106,5 @@ body {
 #numbers button{
     height: 70%;
     width: 32%;
+    background-color: darkorange;
 }

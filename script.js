@@ -1,33 +1,38 @@
-let checker = 0;
-let num1 = ``;
-let num2 = ``;
-let sum = ``;
-let numEvent = document.getElementsByClassName('numPadNumber');
-
-for(let i = 0; i < numEvent.length; i++){
-    numEvent[i].addEventListener('click', function(){
-        num1 += numEvent[i].innerText;
-        sum = num1;
-        document.getElementById('display-num').innerHTML = `${sum}`;
-    })
+function insert(num) {
+    let number = document.getElementById('display-num').innerHTML;
+    document.getElementById('display-num').innerHTML = number + num;
 }
-
-function add(num1, num2){
-    const sum = Number(num1) + Number(num2);
-    return sum;
+function specialInsert(num){
+    let number = document.getElementById('display-num').innerHTML;
+    if(number.includes('+') == true){
+        calculate();
+    }
+    else if(number.includes('-') == true){
+        calculate();
+    }
+    else if(number.includes('*') == true){
+        calculate();
+    }
+    else if(number.includes('/') == true){
+        calculate();
+    }
+    else{
+        document.getElementById('display-num').innerHTML = number + num;
+    }
 }
-
-function subtract(num1, num2){
-    const sum = Number(num1) - Number(num2);
-    return sum;
+function clean() {
+    document.getElementById('display-num').innerHTML = "";
 }
-
-function multiply(num1, num2){
-    const sum = Number(num1) * Number(num2);
-    return sum;
+function back() {
+    let display_num = document.getElementById('display-num').innerHTML;
+    document.getElementById('display-num').innerHTML = display_num.substring(0, display_num.length -1);
 }
-
-function divide(num1, num2){
-    const sum = Number(num1) / Number(num2);
-    return sum; 
+function calculate() {
+    let display_num = document.getElementById('display-num').innerHTML;
+    if(display_num) {
+        document.getElementById('display-num').innerHTML = eval(display_num);
+    }
+    else {
+        document.getElementById('display-num').innerHTML = ""
+    }
 }

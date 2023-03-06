@@ -17,26 +17,31 @@
             </div>
 
             <div id="buttons">
-                <button id="reset">C</button>
+                <div id="special">
+                    <button id="reset" onclick="clean()">C</button>
+                    <button id="back" onclick="back()"><</button>
+                </div>
                 <div id="numPad">
                     <div id="operators">
-                        <button>Add</button>
-                        <button>Subtract</button>
-                        <button>Multiply</button>
-                        <button>Divide</button>
+                        <button id="Add" onclick="specialInsert(' + ')">Add</button>
+                        <button id="Subtract" onclick="specialInsert(' - ')">Subtract</button>
+                        <button id="Multiply" onclick="specialInsert(' * ')">Multiply</button>
+                        <button id="Divide" onclick="specialInsert(' / ')">Divide</button>
                     </div>
 
                     <div id="numbers">
-                        <button class="numPadNumber">7</button>
-                        <button class="numPadNumber">8</button>
-                        <button class="numPadNumber">9</button>
-                        <button class="numPadNumber">4</button>
-                        <button class="numPadNumber">5</button>
-                        <button class="numPadNumber">6</button>
-                        <button class="numPadNumber">1</button>
-                        <button class="numPadNumber">2</button>
-                        <button class="numPadNumber">3</button>
-                        <button class="numPadNumber">0</button>
+                        <button class="numPadNumber" onclick="insert('7')">7</button>
+                        <button class="numPadNumber" onclick="insert('8')">8</button>
+                        <button class="numPadNumber" onclick="insert('9')">9</button>
+                        <button class="numPadNumber" onclick="insert('4')">4</button>
+                        <button class="numPadNumber" onclick="insert('5')">5</button>
+                        <button class="numPadNumber" onclick="insert('6')">6</button>
+                        <button class="numPadNumber" onclick="insert('1')">1</button>
+                        <button class="numPadNumber" onclick="insert('2')">2</button>
+                        <button class="numPadNumber" onclick="insert('3')">3</button>
+                        <button class="numPadNumber" onclick="insert('0')">0</button>
+                        <button class="numpadNumber" onclick="calculate()">=</button>
+                        <button class="numPadNumber" onclick="insert('.')">.</button>
                     </div>
                 </div>
             </div>
