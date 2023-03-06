@@ -2,6 +2,7 @@
     --g1: rgb(98, 0, 234);
     --g2: rgb(236, 64, 122);
   }
+
 body {
   background: linear-gradient(
     to right,
@@ -19,5 +20,34 @@ body {
 #calculator-body {
     min-height: 600px;
     width: 550px;
+    padding: 5px;
     background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  #display{
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    width: 90%;
+    height: 20%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+
+  #buttons{
+    background-color: aqua;
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    width: 90%;
+    height: 65%;
   }
